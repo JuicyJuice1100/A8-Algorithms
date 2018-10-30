@@ -43,9 +43,22 @@ class A8 {
    *
    */
   static void part3(int seed, int algo_num) {
-
-    /* To be completed */
-
+    for(int i = MIN_N; i <= MAX_N; i *= 2){
+      int[] a = createSortedArray(i);
+      shuffleArray(a, seed, rnd.nextInt(i));
+      switch(algo_num){
+        case 1:
+          algo1(a);
+          break;
+        case 2:
+          algo2(a);
+          break;
+        default:
+          algo3(a);
+          break;
+      }
+      //TODO: send output to console #4
+    }
   }// part3 method
 
   /* Perform the three experiments for part 4; the argument must be used
