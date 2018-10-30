@@ -96,7 +96,35 @@ class Rand {
    */
   static void shuffleArray(int[] a, int seed, int n) {
 
-    /* To be completed */
+    int[] doSwap = new int[a.length];
+    int locationOfTwo = a.length - n -1;
+
+    //insert n 1s into the array
+    for(int i = 0; i < n; n++){
+      doSwap[i] = 1;
+    }
+
+    //fill the rest with 2s
+    for(int j = locationOfTwo; j < a.length; j++){
+      doSwap[j] = 2;
+    }
+
+    if(n < a.length-1){
+      fisherYates(a, seed);
+      if (doSwap[0] == 1){
+        swap(a, 0, locationOfTwo);
+        locationOfTwo++;
+      }
+    } else {
+      rnd.setSeed(seed);
+    }
+
+    for(int z = n-1; z > n-1; z--){
+      if(doSwap[z] == 1){
+        int k = rnd.nextInt(i + 1);
+        swap(a, z, k);
+      }
+    }
 
   }// shuffleArray method
 
