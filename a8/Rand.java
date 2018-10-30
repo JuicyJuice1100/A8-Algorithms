@@ -38,8 +38,11 @@ class Rand {
    *           a = [9,7,8,0,1,4,5,2,6,3]
    */
   static void fisherYates(int[] a, int seed) {
-
-  /* To be completed */
+    rnd.setSeed(seed);
+    for(int i = a.length - 1; i > 0; i--){
+      int j = rnd.nextInt(i + 1);
+      swap(a, i, j);
+    }
 
   }// fisherYates method
 
