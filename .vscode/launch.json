@@ -9,8 +9,7 @@
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "A8",
-            "args": "p4a3",
-            "vmArgs": "-Xms2000m -Xss2000m -D"
+            "args": "p4a3"
         }
     ]
 }
