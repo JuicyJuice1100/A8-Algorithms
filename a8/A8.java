@@ -130,9 +130,23 @@ class A8 {
    *
    */
   static void part5(int algo_num) {
-
-    /* To be completed */
-
+    System.out.printf("%-10s | %-10s\n", "Size", "Time");
+    for(int i = MIN_N; i <= MAX_N; i *= 2){
+      int[] a = Utils.createReverseSortedArray(i);
+      double time;
+      switch(algo_num){
+        case 1:
+          time = Sort.algo1(a);
+          break;
+        case 2:
+          time = Sort.algo2(a);
+          break;
+        default:
+          time = Sort.algo3(a);
+          break;
+      }
+      System.out.printf("%-10d | %.4e\n", i, time);    
+    }
   }// part5 method
 
   /* Perform the three experiments for part 6; the argument must be used
@@ -159,8 +173,23 @@ class A8 {
    */
   static void part6(int algo_num) {
 
-    /* To be completed */
-
+    System.out.printf("%-10s | %-10s\n", "Size", "Time");
+    for(int i = MIN_N; i <= MAX_N; i *= 2){
+      int[] a = Utils.createEqualElementsArray(i);
+      double time;
+      switch(algo_num){
+        case 1:
+          time = Sort.algo1(a);
+          break;
+        case 2:
+          time = Sort.algo2(a);
+          break;
+        default:
+          time = Sort.algo3(a);
+          break;
+      }
+      System.out.printf("%-10d | %.4e\n", i, time);
+    }
   }// part6 method
 
   /* Perform the three experiments for part 7; the first argument must be used
@@ -187,8 +216,24 @@ class A8 {
    */
   static void part7(int seed, int algo_num) {
 
-    /* To be completed */
-
+    System.out.printf("%-10s | %-10s\n", "Size", "Time");
+    for(int i = 0; i <= 5000; i += 100){
+      int[] a = Utils.createSortedArray((int)Math.pow(2, 20));
+      double time;
+      Rand.shuffleArray(a, seed, i);
+      switch(algo_num){
+        case 1:
+          time = Sort.algo1(a);
+          break;
+        case 2:
+          time = Sort.algo2(a);
+          break;
+        default:
+          time = Sort.algo3(a);
+          break;
+      }
+      System.out.printf("%-10d | %.4e\n", i, time);    
+    }
   }// part7 method
 
   /*********************************/

@@ -1,4 +1,4 @@
-"p3a1"
+"p3a1" \Theta(NlogN)
 Size       | Time
 1024       | 0.0000e+00
 2048       | 0.0000e+00
