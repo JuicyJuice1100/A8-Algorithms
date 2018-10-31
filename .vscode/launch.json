@@ -1,5 +1,6 @@
 {
     "configurations": [
+
         {
             "type": "java",
             "name": "CodeLens (Launch) - A8",
@@ -8,7 +9,8 @@
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "A8",
-            "args": "p3a2"
+            "args": "p4a3",
+            "vmArgs": "-Xms2000m -Xss2000m -D"
         }
     ]
 }

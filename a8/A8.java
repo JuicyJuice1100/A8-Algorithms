@@ -59,7 +59,7 @@ class A8 {
           time = Sort.algo3(a);
           break;
       }
-      System.out.printf("%-10d | %.4f\n", i, time);
+      System.out.printf("%-10d | %.4e\n", i, time);
       //TODO: send output to console #4
     }
   }// part3 method
@@ -88,8 +88,23 @@ class A8 {
    */
   static void part4(int algo_num) {
 
-    /* To be completed */
-
+    System.out.printf("%-10s | %-10s\n", "Size", "Time");
+    for(int i = MIN_N; i <= MAX_N; i *= 2){
+      int[] a = Utils.createSortedArray(i);
+      double time;
+      switch(algo_num){
+        case 1:
+          time = Sort.algo1(a);
+          break;
+        case 2:
+          time = Sort.algo2(a);
+          break;
+        default:
+          time = Sort.algo3(a);
+          break;
+      }
+      System.out.printf("%-10d | %.4e\n", i, time);
+    }
   }// part4 method
 
   /* Perform the three experiments for part 5; the argument must be used
