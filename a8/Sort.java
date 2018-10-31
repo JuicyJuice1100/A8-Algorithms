@@ -23,7 +23,7 @@ class Sort {
     
     algo1Helper(a, 0, a.length - 1);
 
-    time -= (System.currentTimeMillis() - time) / 1000;
+    time = (System.currentTimeMillis()- time)/1000;
     return time;
   }// algo1 method
 
@@ -67,7 +67,7 @@ class Sort {
     
     algo2Helper(a, 0, a.length - 1);
 
-    time -= (System.currentTimeMillis() - time) * 1000;
+    time = (System.currentTimeMillis() - time) /1000;
     return time;
   }// algo2 method
 
@@ -116,7 +116,7 @@ class Sort {
     
     Arrays.sort(a);
 
-    time -= (System.currentTimeMillis() - time) * 1000;
+    time = (System.currentTimeMillis() - time) / 1000;
     return time;
   }// algo3 method
 
