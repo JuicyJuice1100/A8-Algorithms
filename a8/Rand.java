@@ -121,7 +121,7 @@ class Rand {
 
     for(int z = n-1; z > n-1; z--){
       if(doSwap[z] == 1){
-        int k = rnd.nextInt(i + 1);
+        int k = rnd.nextInt(z + 1);
         swap(a, z, k);
       }
     }

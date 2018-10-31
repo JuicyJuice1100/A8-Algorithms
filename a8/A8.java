@@ -43,20 +43,23 @@ class A8 {
    *
    */
   static void part3(int seed, int algo_num) {
+    System.out.printf("%-10s | %-10s\n", "Size", "Time");
     for(int i = MIN_N; i <= MAX_N; i *= 2){
-      int[] a = createSortedArray(i);
-      shuffleArray(a, seed, rnd.nextInt(i));
+      int[] a = Utils.createSortedArray(i);
+      double time;
+      Rand.shuffleArray(a, seed, Rand.rnd.nextInt(i));
       switch(algo_num){
         case 1:
-          algo1(a);
+          time = Sort.algo1(a);
           break;
         case 2:
-          algo2(a);
+          time = Sort.algo2(a);
           break;
         default:
-          algo3(a);
+          time = Sort.algo3(a);
           break;
       }
+      System.out.printf("%-10d | %.4f\n", i, time);
       //TODO: send output to console #4
     }
   }// part3 method

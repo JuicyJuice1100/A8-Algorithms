@@ -50,10 +50,10 @@ class Sort {
     for (int j = p; j < r; j++){
       if (a[j] <= a[r]){
         i++;
-        swap(a,i,j);
+        Rand.swap(a,i,j);
       }
     }
-    swap(a, i+1, r);
+    Rand.swap(a, i+1, r);
     return i+1;
   }// partition1 method
 
