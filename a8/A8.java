@@ -244,9 +244,7 @@ class A8 {
    * Arrays.sort(int[]) to (partly) execute a one-pivot quicksort algorithm.
    */
    static int[] part9() {
-     int[] a = null;
-
-     /* To be completed */
+     int[] a = {1,3,2};
 
      return a;
    }// part9 method
