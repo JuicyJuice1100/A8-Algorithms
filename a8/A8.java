@@ -216,7 +216,7 @@ class A8 {
    */
   static void part7(int seed, int algo_num) {
 
-    System.out.printf("%-10s | %-10s\n", "Size", "Time");
+    System.out.printf("%-10s | %-10s\n", "Randomness", "Time");
     for(int i = 0; i <= 5000; i += 100){
       int[] a = Utils.createSortedArray((int)Math.pow(2, 20));
       double time;
